@@ -2,12 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 import kino_parser
 from datetime import datetime
-username = 'sysadmin@cinemaciti.od.ua'   #input('Enter user name: ')
-password = '1111'     #input ('Enter password: ')
+username = 'MyUsername'   #input('Enter user name: ')
+password = 'My-super-pa$$-worD'     #input ('Enter password: ')
 youtube = input('Enter trailer url: ')
 
-url = 'https://cinemaciti.ua/admin/site/login'
-create_url = 'https://cinemaciti.ua/admin/moder-films/create?id=2'
+url = 'https://CCadminURL'
+create_url = 'https://CCFilmCreateURL'
 
 def get_html(url):
     r = requests.get(url)
@@ -76,8 +76,7 @@ film_param = {
 def film_create(data_dec, in_url):
     r = requests.Session()
     response = r.get(in_url, data=data_dec)
-    #file = open('film_create', 'w')
-    #file = file.write (response.text)   for check errors
+    
     return response
 
 def main(in_url, data_dec):
