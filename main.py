@@ -2,12 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 import kino_parser
 from datetime import datetime
-username = 'MyUsername'   #input('Enter user name: ')
-password = 'My-super-pa$$-worD'     #input ('Enter password: ')
+username = input('Enter user name: ')
+password = input ('Enter password: ')
 youtube = input('Enter trailer url: ')
 
-url = 'https://CCadminURL'
-create_url = 'https://CCFilmCreateURL'
+url = 'https://CCadminUrl'
+create_url = 'https://CCFilmCreateUrl'
 
 def get_html(url):
     r = requests.get(url)
