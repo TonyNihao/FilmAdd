@@ -2,10 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import parser
 
-username = 'sysadmin@cinemaciti.od.ua'
-password = '1111'
-url = 'https://cinemaciti.ua/admin/site/login'
-create_url = 'https://cinemaciti.ua/admin/moder-films/create?id=2'
+username = 'MyUserName'
+password = 'My-Password12$'
+url = 'https://LoginUrl'
+create_url = 'https://FilmCreateUrl'
 
 film_info = parser.main()
 
@@ -84,7 +84,6 @@ def main(in_url, data_dec):
         print('Login: FILED')
     else:
         print('Check errors')
-    print (film_info)
 
 
 
